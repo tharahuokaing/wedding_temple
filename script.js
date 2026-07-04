@@ -52,23 +52,4 @@ function scrollToTop() {
 function openKohChenMap() {
     window.open("https://maps.app.goo.gl/5kikd7zafHEAujVJ6", "_blank");
 }
-    }
-}
-
-/**
- * មុខងាររុញទំព័រត្រឡប់ទៅផ្នែកខាងលើបង្អស់ដោយរលូន (Smooth Scroll)
- */
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // ធ្វើឱ្យផ្ទៃអេក្រង់រំកិលឡើងទៅលើថ្នមៗ
-    });
-}
-
-/**
- * មុខងារបើកទៅកាន់ទីតាំង Google Maps ប្រាសាទនៅកោះចិន
- */
-function openKohChenMap() {
-    window.open("https://maps.app.goo.gl/5kikd7zafHEAujVJ6", "_blank");
-}
 
