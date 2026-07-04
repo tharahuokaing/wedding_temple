@@ -3,37 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>កម្មវិធីដំណើរកម្សាន្តតាមទូកង ទៅកាន់ប្រាសាទកោះចិន</title>
+    <title>កម្មវិធីដំណើរទស្សនកិច្ចប្រាសាទកោះចិន និងក្បួនដង្ហែទូកងមង្គល</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Moul&family=Hanuman:wght@400;700&family=Freehand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Moul&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="invitation-container">
-        <!-- Header Image Decoration -->
-        <div class="khmer-sticker-header">
-            <img src="https://github.com/tharahuokaing/weeding/blob/main/weeding.png?raw=true" alt="Decorative Traditional Header Sign">
+        <!-- កន្លែងដាក់រូបភាពក្បាលទំព័រ -->
+        <div class="image-attach-box">
+            <img src="https://github.com/tharahuokaing/weeding/blob/main/weeding.png?raw=true" alt="Wedding Header Banner">
         </div>
 
-        <h1 class="title-moul">កម្មវិធីលម្អិត ដំណើរកម្សាន្តតាមទូកង<br>ទៅលេងប្រាសាទបុរាណ នៅកោះចិន</h1>
-
-        <!-- Main Banner Image Context -->
-        <div class="image-placeholder main-banner">
-            <img src="សូមដាក់លីងរូបភាពផ្ទាំងទិដ្ឋភាពរួមទីនេះ.jpg" alt="ទិដ្ឋភាពរួមនៃពិធីធ្វើដំណើរតាមទូកង">
-            <span class="img-caption">📸 រូបភាព៖ ទិដ្ឋភាពរួមនៃព្រះរាជពិធីតាមផ្លូវទឹក</span>
-        </div>
-
-        <p class="ceremony-text">
-            បន្ទាប់ពីការពិសាអាហារថ្ងៃត្រង់រួចរាល់ វេលាម៉ោង **១២:០០ ថ្ងៃត្រង់ (ថ្ងៃទី ០៣)** យើងខ្ញុំសូមអញ្ជើញភ្ញៀវកិត្តិយស និងញាតិមិត្តទាំងអស់ ចូលរួមដង្ហែរ និងទស្សនាវល្លិ៍នៃក្បួនទូកងបុរាណចំនួន ០៣ គ្រឿង ដើម្បីធ្វើដំណើរទៅកាន់ប្រាសាទបុរាណនៅកោះចិន តាមលំដាប់លំដោយក្បួនច្បាប់វប្បធម៌ខ្មែរ។
+        <h1 class="title-moul">កម្មវិធីដំណើរទស្សនកិច្ចប្រាសាទបុរាណ<br>និងក្បួនដង្ហែទូកងមង្គល នៅកោះចិន</h1>
+        
+        <p class="intro-text">
+            បន្ទាប់ពីការពិសាអាហារថ្ងៃត្រង់ដ៏មហាសែនរីករាយរួចមក យើងខ្ញុំសូមអញ្ជើញភ្ញៀវកិត្តិយស និងញាតិមិត្តទាំងអស់ ចូលរួមដង្ហែនិងទស្សនា កម្មវិធីវប្បធម៌ប្រពៃណីដ៏អស្ចារ្យ ទៅកាន់ដែនដីប្រាសាទបុរាណនៃកោះចិន។
         </p>
 
-        <!-- Toggle Button for Program Details -->
+        <!-- ប៊ូតុងពន្លាតមើលកម្មវិធីលម្អិត -->
         <div class="program-wrapper">
             <button class="btn-program-toggle" onclick="toggleProgram()">
-                📋 សូមចុចទីនេះដើម្បីមើលទិដ្ឋភាពក្បួនទូក និងកម្មវិធីលម្អិត
+                📋 សូមចុចទីនេះដើម្បីមើលកម្មវិធីការលម្អិត
             </button>
+
+            <div id="weddingTimeline" class="timeline-container collapsed">
+                <h4 class="timeline-main-title">⏱️ លំដាប់លំដោយកម្មវិធីការ (១២:០០ ថ្ងៃត្រង់ តទៅ)</h4>
+
+                <!-- វគ្គទី ១: អាហារថ្ងៃត្រង់ -->
+                <div class="timeline-item">
+                    <div class="time-badge">១២:០០ ថ្ងៃ</div>
+                    <div class="timeline-content">
+                        <strong>ពិសាអាហារថ្ងៃត្រង់៖</strong> ជួបជុំភ្ញៀវកិត្តិយស និងក្រុមការងារទាំងអស់ ពិសាភោជនាហារថ្ងៃត្រង់ជុំគ្នា ដើម្បីបង្កើនសាមគ្គីភាព និងត្រៀមថាមពល។
+                    </div>
+                </div>
+                <!-- រូបភាពភ្ជាប់វគ្គទី១ -->
+                <div class="image-attach-box item-img">
+                    <img src="ទីនេះដាក់_URL_រូបភាពអាហារថ្ងៃត្រង់.jpg" alt="[សូមភ្ជាប់រូបភាពពិសាអាហារថ្ងៃត្រង់ទីនេះ]">
+                </div>
+
+                <!-- វគ្គទី ២: ក្បួនដង្ហែទូកង -->
+                <div class="timeline-item highlight-banquet">
+                    <div class="time-badge">០១:៣០ រសៀល</div>
+                    <div class="timeline-content">
+                        <strong>ក្បួនដង្ហែទូកងមង្គលទាំង ០៣៖</strong> ចាប់ផ្តើមចេញដំណើរដង្ហែតាមផ្លូវទឹកយ៉ាងអធិកអធម ដោយមានចំណុះទូកទាំងអស់គ្រង <span class="highlight-text">«សម្លៀកបំពាក់បែបបុរាណ»</span> អមដោយសំឡេង <span class="highlight-text">«ស្គរជ័យ និងការផ្លុំស្នែង»</span> ញ៉ាំងបរិយាកាសឱ្យកាន់តែមានឫទ្ធីបារមីខ្លាំងក្លា ទៅតាមលំដាប់លំដោយជួរ៖
+                        <ul class="boat-order">
+                            <li>🛶 <strong>ទូកទី១ (អ្នកនាំផ្លូវ)៖</strong> ទូកង មហានិគ្រោធតេជោសែនជ័យ</li>
+                            <li>🛶 <strong>ទូកទី២ (កណ្តាល)៖</strong> ទូកង កូនកំលោះ ហួកាំង ថារ៉ា</li>
+                            <li>🛶 <strong>ទូកទី៣ (ក្រោយគេ)៖</strong> ទូកង សាឯមសែនជ័យបារមីស្វាយជ្រុំ</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- រូបភាពភ្ជាប់វគ្គទី២ -->
+                <div class="image-attach-box item-img">
+                    <img src="ទីនេះដាក់_URL_រូបភាពទូកង.jpg" alt="[សូមភ្ជាប់រូបភាពក្បួនទូកងបុរាណទីនេះ]">
+                </div>
+
+                <!-- វគ្គទី ៣: ពិធីបួងសួង -->
+                <div class="timeline-item highlight-banquet">
+                    <div class="time-badge">០២:៣០ រសៀល</div>
+                    <div class="timeline-content">
+                        <strong>ពិធីបួងសួងព្រះនាងសូមា នៅប្រាសាទបុរាណ៖</strong> ទៅដល់ទីតាំងប្រាសាទកោះចិន និងប្រារព្ធកិច្ច <span class="highlight-text">«បួងសួងសុំសិរីសួស្តីពីព្រះនាងសូមា»</span> (មាតាធិបតីខ្មែរដំបូង) ព្រមទាំងមានការផ្លុំស្នែងជាកិច្ចកាត់ឆ្មាំ និងបើកទ្វារលាភជ័យ។
+                    </div>
+                </div>
+                <!-- រូបភាពភ្ជាប់វគ្គទី៣ -->
+                <div class="image-attach-box item-img">
+                    <img src="ទីនេះដាក់_URL_រូបភាពពិធីបួងសួង.jpg" alt="[សូមភ្ជាប់រូបភាពពិធីបួងសួងព្រះនាងសូមាទីនេះ]">
+                </div>
+
+                <!-- វគ្គទី ៤: ថតរូបសមូហភាព -->
+                <div class="timeline-item">
+                    <div class="time-badge">០៣:៣០ រសៀល</div>
+                    <div class="timeline-content">
+                        <strong>ការថតរូបអនុស្សាវរីយ៍រួមគ្នា៖</strong> ជួបជុំគូស្វាមីភរិយាថ្មី ចំណុះទូកងទាំងឡាយ និងភ្ញៀវកិត្តិយសទាំងអស់ ថតរូបជាក្រុមជុំគ្នាទុកជាប្រវត្តិសាស្ត្រ និងការចងចាំដ៏មានន័យ។
+                    </div>
+                </div>
+                <!-- រូបភាពភ្ជាប់វគ្គទី៤ -->
+                <div class="image-attach-box item-img">
+                    <img src="ទីនេះដាក់_URL_រូបភាពថតរួមគ្នា.jpg" alt="[សូមភ្ជាប់រូបភាពថតរូបជុំគ្នាទីនេះ]">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ផ្នែកទីតាំង Google Maps -->
+        <div class="location-section">
+            <span class="location-title">📍 ទីតាំងប្រាសាទកោះចិន៖</span>
+            <button class="btn-map" onclick="openKohChenMap()">🗺️ ចុចទីនេះដើម្បីមើលផែនទី Google Maps</button>
+        </div>
+
+        <!-- កន្លែងដាក់រូបភាពបាតទំព័រ -->
+        <div class="image-attach-box" style="margin-top: 20px;">
+            <img src="https://github.com/tharahuokaing/weeding/blob/main/weeding_footer.png?raw=true" alt="Wedding Footer Banner">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>ដោយក្តីគោរព និងស្រឡាញ់វប្បធម៌ខ្មែរពី<br><strong>ហួកាំង ថារ៉ា & ខេន លីដា</strong></p>
+        <p>© ២០២៦ ដំណើរវប្បធម៌មង្គលភិសេក</p>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">⬆️ ទៅកំពូល</button>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
 
             <div id="weddingTimeline" class="timeline-container collapsed">
                 <h4 class="timeline-main-title">
