@@ -304,3 +304,423 @@ footer p {
         gap: 8px;
     }
 }
+
+/* ==========================================================================
+   1. Global Resets & Google Fonts
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Kanten:wght@400;700&family=Moul&family=Noto+Sans+Khmer:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-red: #8b0000;
+    --dark-red: #5c0000;
+    --gold-accent: #b8860b;
+    --gold-light: #fbe8a6;
+    --gold-glow: rgba(184, 134, 11, 0.35);
+    --bg-warm: #fcf9f2;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --text-dark: #2c2c2c;
+    --text-muted: #555555;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 14px 40px rgba(139, 0, 0, 0.15);
+    --radius-lg: 20px;
+    --radius-md: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-warm);
+    background-image: radial-gradient(circle at 50% 0%, rgba(251, 232, 166, 0.3) 0%, transparent 70%);
+    font-family: 'Noto Sans Khmer', 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. Container & Header Section
+   ========================================================================== */
+.invitation-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px 25px;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(184, 134, 11, 0.25);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.image-attach-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-bottom: 25px;
+}
+
+.image-attach-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-attach-box:hover img {
+    transform: scale(1.02);
+}
+
+/* Bilingual Header */
+.bilingual-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.title-moul {
+    font-family: 'Moul', serif;
+    color: var(--primary-red);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(139, 0, 0, 0.1);
+    margin-bottom: 8px;
+}
+
+.title-en {
+    font-family: 'Poppins', sans-serif;
+    color: var(--gold-accent);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+/* Intro Text Cards */
+.bilingual-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(251, 232, 166, 0.15);
+    border-left: 4px solid var(--gold-accent);
+    border-radius: var(--radius-md);
+}
+
+.intro-text, .intro-text-en {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+}
+
+.intro-text-en {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==========================================================================
+   3. Interactive Buttons (Modern Gradient & Ripples)
+   ========================================================================== */
+.program-toggle-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.btn-program-toggle {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--gold-accent) 100%);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(139, 0, 0, 0.2);
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    animation: gradientShift 6s ease infinite;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-program-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--gold-glow);
+}
+
+.btn-program-toggle:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.btn-program-toggle .toggle-icon {
+    display: inline-block;
+    font-size: 0.8rem;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn-program-toggle.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   4. Smooth Accordion Grid & Timeline Cards
+   ========================================================================== */
+.bilingual-program-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+    transition: grid-template-rows 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.45s ease,
+                visibility 0.45s ease,
+                margin 0.45s ease;
+    margin-top: 0;
+}
+
+.timeline-inner-wrapper {
+    overflow: hidden;
+}
+
+.timeline-container:not(.collapsed),
+.timeline-container.expanded {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 10px;
+}
+
+.program-wrapper {
+    background: #ffffff;
+    border: 1px solid rgba(184, 134, 11, 0.2);
+    border-radius: var(--radius-md);
+    padding: 24px 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.timeline-main-title {
+    color: var(--primary-red);
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed rgba(184, 134, 11, 0.3);
+}
+
+/* Timeline Cards */
+.timeline-item {
+    position: relative;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+    background: var(--bg-warm);
+    border-left: 4px solid var(--gold-accent);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    border-left-color: var(--primary-red);
+}
+
+.time-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--dark-red);
+    background: var(--gold-light);
+    border-radius: 20px;
+}
+
+.timeline-content {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.highlight-text {
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+.boat-order {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.boat-order li {
+    padding: 4px 0;
+    font-size: 0.9rem;
+}
+
+.item-img {
+    margin: 10px 0 20px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Staggered Slide Animation for Items */
+.timeline-container:not(.collapsed) .timeline-item,
+.timeline-container.expanded .timeline-item {
+    animation: slideUpFade 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.timeline-container .timeline-item:nth-child(1) { animation-delay: 0.08s; }
+.timeline-container .timeline-item:nth-child(2) { animation-delay: 0.16s; }
+.timeline-container .timeline-item:nth-child(3) { animation-delay: 0.24s; }
+.timeline-container .timeline-item:nth-child(4) { animation-delay: 0.32s; }
+.timeline-container .timeline-item:nth-child(n+5) { animation-delay: 0.40s; }
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================================================
+   5. Location & Google Maps Section
+   ========================================================================== */
+.location-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0 20px 0;
+    padding: 20px;
+    background: rgba(139, 0, 0, 0.03);
+    border: 1px dashed var(--gold-accent);
+    border-radius: var(--radius-md);
+}
+
+.location-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary-red);
+}
+
+.btn-map {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--primary-red);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-map:hover {
+    background: var(--dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(139, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   6. Footer & Back-to-Top Button
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+footer strong {
+    color: var(--primary-red);
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--gold-accent);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   7. Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 900px) {
+    .bilingual-intro,
+    .bilingual-program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-toggle-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title-moul {
+        font-size: 1.5rem;
+    }
+
+    .title-en {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .invitation-container {
+        padding: 20px 15px;
+        margin: 10px;
+    }
+
+    .btn-program-toggle {
+        font-size: 0.9rem;
+        padding: 12px 16px;
+    }
+
+    .timeline-item {
+        padding: 12px 14px;
+    }
+}
