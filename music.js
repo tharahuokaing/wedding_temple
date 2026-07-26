@@ -1,5 +1,5 @@
 // ===================================================
-// Wedding Background Music Interactivity (script1.js)
+// Wedding Background Music Interactivity (music.js)
 // ===================================================
 
 /**
