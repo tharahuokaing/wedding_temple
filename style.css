@@ -1068,3 +1068,94 @@ footer strong {
     color: #8b0000;
     white-space: nowrap;
 }
+
+/* ==========================================================================
+   Center-Aligned Highlight Block Layout
+   ========================================================================== */
+
+/* Main Card Container */
+.timeline-item.highlight-banquet {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally inside card */
+    text-align: center;  /* Center align all primary text */
+    padding: 24px 20px;
+    background: linear-gradient(145deg, #ffffff 0%, #fffdf7 100%);
+    border: 1px solid rgba(184, 134, 11, 0.35);
+    border-top: 5px solid #8b0000; /* Top border accent for centered flow */
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px rgba(184, 134, 11, 0.12);
+}
+
+/* Time Badge Centered */
+.timeline-item.highlight-banquet .time-badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 14px auto;
+    padding: 6px 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #4a0000;
+    background: linear-gradient(135deg, #ffe89e 0%, #f7c844 100%);
+    border: 1px solid rgba(184, 134, 11, 0.5);
+    border-radius: 30px;
+    box-shadow: 0 3px 8px rgba(184, 134, 11, 0.25);
+}
+
+/* Timeline Content & Body Text Centered */
+.timeline-item.highlight-banquet .timeline-content {
+    width: 100%;
+    text-align: center; /* Move all Khmer text to the middle */
+    font-size: 0.98rem;
+    line-height: 1.85;
+    color: #2d2d2d;
+}
+
+/* Highlighted Khmer Terms Center Spacing */
+.timeline-item.highlight-banquet .highlight-text {
+    display: inline-block;
+    color: #8b0000;
+    font-weight: 700;
+    background: rgba(139, 0, 0, 0.06);
+    border: 1px solid rgba(139, 0, 0, 0.15);
+    padding: 2px 10px;
+    margin: 2px 4px;
+    border-radius: 6px;
+}
+
+/* Boat List Centered Container */
+.boat-order {
+    list-style: none;
+    width: 100%;
+    max-width: 500px; /* Constrains list width for optimal center alignment */
+    margin: 18px auto 0 auto;
+    padding: 12px;
+    background: rgba(251, 232, 166, 0.18);
+    border: 1px dashed rgba(184, 134, 11, 0.4);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Centered Individual Boat Items */
+.boat-order li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-aligns emoji, titles, and boat names */
+    text-align: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #ffffff;
+    border: 1px solid rgba(184, 134, 11, 0.25);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    color: #333333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.boat-order li strong {
+    color: #8b0000;
+}
