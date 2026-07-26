@@ -231,3 +231,21 @@ footer p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+.dual-program-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+@media (min-width: 868px) {
+    .dual-program-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .program-column {
+        flex: 1;
+        min-width: 0;
+    }
+}
