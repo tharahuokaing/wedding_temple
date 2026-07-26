@@ -1159,3 +1159,39 @@ footer strong {
 .boat-order li strong {
     color: #8b0000;
 }
+
+/* Decorative Golden Border for Maps & Footer Boxes */
+.location-section {
+    border: 2px dashed #b8860b;
+    background: #fffdf5;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.btn-map {
+    background: linear-gradient(135deg, #7a0000 0%, #a80000 100%);
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(122, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-map:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(122, 0, 0, 0.4);
+}
+
+/* Ornamental Image Frame Styling */
+.ornamental-footer {
+    border: 2px dashed #b8860b;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fffdf5;
+    margin-top: 20px;
+}
