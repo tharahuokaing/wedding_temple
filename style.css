@@ -277,3 +277,30 @@ footer p {
         gap: 8px;
     }
 }
+/* Dual Column Desktop / Tablet Grid Structure */
+.bilingual-program-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.program-toggle-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.program-toggle-bar .btn-program-toggle {
+    flex: 1;
+}
+
+/* On Mobile Screens: Stack vertically */
+@media (max-width: 768px) {
+    .bilingual-program-grid {
+        grid-template-columns: 1fr;
+    }
+    .program-toggle-bar {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
