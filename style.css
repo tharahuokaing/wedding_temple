@@ -724,3 +724,111 @@ footer strong {
         padding: 12px 14px;
     }
 }
+
+/* ==========================================================================
+   Centered Readability & Alphabet/Time Badge Styling
+   ========================================================================== */
+
+/* Main Section Header Alignment */
+.timeline-main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #8b0000;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px dashed rgba(184, 134, 11, 0.3);
+}
+
+/* Centered & Prominent Time / Alphabet Badges */
+.time-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 130px;
+    margin: 0 auto 12px auto; /* Centers the badge horizontally */
+    padding: 6px 16px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #5c0000;
+    background: linear-gradient(135deg, #fbe8a6 0%, #f7d070 100%);
+    border: 1px solid rgba(184, 134, 11, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(184, 134, 11, 0.2);
+    text-align: center;
+}
+
+/* Individual Timeline Card Centered Layout Improvements */
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center badge and contents */
+    text-align: center;  /* Easy reading alignment */
+    position: relative;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-top: 3px solid #b8860b; /* Top border accent instead of side for centered flow */
+    border-left: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-3px);
+    border-top-color: #8b0000;
+    box-shadow: 0 8px 22px rgba(139, 0, 0, 0.12);
+}
+
+/* Timeline Body Text Readability */
+.timeline-content {
+    width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: #2c2c2c;
+    text-align: left; /* Keeps body text left-aligned for natural reading */
+}
+
+/* Boat Order Bulleted List Layout */
+.boat-order {
+    list-style: none;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(251, 232, 166, 0.18);
+    border-radius: 10px;
+    border: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.boat-order li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 0.92rem;
+    text-align: left;
+}
+
+/* Highlighted Khmer & English Key Terms */
+.highlight-text {
+    color: #8b0000;
+    font-weight: 700;
+    background: rgba(251, 232, 166, 0.35);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Centered Attached Images Under Items */
+.image-attach-box.item-img {
+    margin: 12px auto 24px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
